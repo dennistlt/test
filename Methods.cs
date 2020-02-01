@@ -2089,6 +2089,14 @@ namespace PoeTradeSearch
                                     System.Windows.Forms.SendKeys.SendWait("/invite ");
                                     System.Windows.Forms.SendKeys.SendWait("{ENTER}");
                                 }
+                                else if (valueLower.IndexOf("{tradewith}") == 0)
+                                {
+                                    System.Windows.Forms.SendKeys.SendWait("^{ENTER}");
+                                    System.Windows.Forms.SendKeys.SendWait("{HOME}");
+                                    System.Windows.Forms.SendKeys.SendWait("{DELETE}");
+                                    System.Windows.Forms.SendKeys.SendWait("/tradewith ");
+                                    System.Windows.Forms.SendKeys.SendWait("{ENTER}");
+                                }
                                 else if (valueLower.IndexOf("{link}") == 0)
                                 {
                                     Regex regex = new Regex(@"{link}", RegexOptions.IgnoreCase);
